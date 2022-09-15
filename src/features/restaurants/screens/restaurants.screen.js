@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   search: {
-    backgroundColor: 'green',
     padding: 12,
   },
 
