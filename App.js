@@ -1,23 +1,34 @@
 import React from 'react';
 import type {Node} from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, Text, View, StyleSheet} from 'react-native';
 
 const App: () => Node = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <View style={{backgroundColor: 'green', padding: 12}}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.search}>
         <Text>search</Text>
       </View>
-      <View
-        style={{
-          backgroundColor: 'blue',
-          flex: 1,
-          padding: 8,
-        }}>
+      <View style={styles.list}>
         <Text>list</Text>
       </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  search: {
+    backgroundColor: 'green',
+    padding: 12,
+  },
+
+  list: {
+    backgroundColor: 'blue',
+    flex: 1,
+    padding: 8,
+  },
+});
 
 export default App;
