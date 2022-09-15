@@ -2,12 +2,15 @@ import React from 'react';
 import type {Node} from 'react';
 import {SafeAreaView, Text, View, StyleSheet} from 'react-native';
 
+import Search from './src/components/search';
+
 const App: () => Node = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.search}>
-        <Text>search</Text>
+        <Search />
       </View>
+
       <View style={styles.list}>
         <Text>list</Text>
       </View>
