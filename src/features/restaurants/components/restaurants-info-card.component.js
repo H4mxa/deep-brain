@@ -1,11 +1,9 @@
 import React from 'react';
 import {Text} from 'react-native';
-
 import {Card} from 'react-native-paper';
+import {styles, Title} from './styles';
 
-import {styles} from './styles';
-
-const RetaurantInfo = ({restaurant = {}}) => {
+const RetaurantInfoCard = ({restaurant = {}}) => {
   const {
     name = 'Some Restaurant',
     icon,
@@ -21,9 +19,9 @@ const RetaurantInfo = ({restaurant = {}}) => {
   return (
     <Card elevation={5} style={styles.card}>
       <Card.Cover key={name} style={styles.cover} source={{uri: photos[0]}} />
-      <Text style={styles.title}>Card content</Text>
+      <Title style={styles.title}>Card content</Title>
     </Card>
   );
 };
 
-export default RetaurantInfo;
+export default RetaurantInfoCard;
