@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text} from 'react-native';
 import {Card} from 'react-native-paper';
-import {styles, Title} from './styles';
+import {styles, Title, RestaurantCard, RestaurantCardCover} from './styles';
 
 const RetaurantInfoCard = ({restaurant = {}}) => {
   const {
@@ -17,10 +17,10 @@ const RetaurantInfoCard = ({restaurant = {}}) => {
   } = restaurant;
 
   return (
-    <Card elevation={5} style={styles.card}>
-      <Card.Cover key={name} style={styles.cover} source={{uri: photos[0]}} />
-      <Title style={styles.title}>Card content</Title>
-    </Card>
+    <RestaurantCard elevation={5}>
+      <RestaurantCardCover key={name} source={{uri: photos[0]}} />
+      <Title>Card content</Title>
+    </RestaurantCard>
   );
 };
 
