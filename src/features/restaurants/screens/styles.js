@@ -7,10 +7,9 @@ export const SafeArea = styled(SafeAreaView)`
   // ${StatusBar.currentHeight && ` margin-top: ${StatusBar.currentHeight}px`};
 `;
 export const SearchContainer = styled.View`
-  padding: 12px;
+  padding: ${props => props.theme.space[3]};
 `;
 export const RestaurantListContainer = styled.View`
-  background-color: 'blue';
   flex: 1;
-  padding: 8px;
+  padding: ${props => props.theme.space[2]};
 `;
