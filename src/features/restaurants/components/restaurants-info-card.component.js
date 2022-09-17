@@ -1,12 +1,14 @@
 import React from 'react';
-
 import {
   RestaurantCard,
   RestaurantCardCover,
   Info,
   Title,
   Address,
+  Rating,
 } from './styles';
+import {SvgXml} from 'react-native-svg';
+import star from '../../../../assets/star';
 
 const RetaurantInfoCard = ({restaurant = {}}) => {
   const {
@@ -21,11 +23,18 @@ const RetaurantInfoCard = ({restaurant = {}}) => {
     isClosedTemporarily,
   } = restaurant;
 
+  const ratingArray = Array.from(new Array(Math.floor(rating)));
+
   return (
     <RestaurantCard elevation={5}>
       <RestaurantCardCover key={name} source={{uri: photos[0]}} />
       <Info>
         <Title>Card content</Title>
+        <Rating>
+          {ratingArray.map(() => (
+            <SvgXml xml={star} width={20} height={20} />
+          ))}
+        </Rating>
         <Address>100 some random street</Address>
       </Info>
     </RestaurantCard>
