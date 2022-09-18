@@ -9,7 +9,7 @@ import {
   Rating,
   SectionEnd,
   Icon,
-} from './styles';
+} from './restaurants-info-card.styles';
 import {SvgXml} from 'react-native-svg';
 import star from '../../../../assets/star';
 import open from '../../../../assets/open';
