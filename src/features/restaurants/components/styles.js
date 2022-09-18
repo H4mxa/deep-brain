@@ -30,18 +30,10 @@ export const SectionEnd = styled.View`
   flex-direction: row;
   justify-content: flex-end;
 `;
-export const CloseMessage = styled.Text`
-  color: 'red';
-`;
-export const LodgeIcon = styled.Image`
+
+export const Icon = styled.Image`
   width: 15px;
   height: 15px;
-`;
-
-export const Title = styled.Text`
-  color: ${props => props.theme.colors.ui.primary};
-  font-family: ${props => props.theme.fonts.heading};
-  font-size: ${props => props.theme.fontSizes.body};
 `;
 
 export const Address = styled.Text`
